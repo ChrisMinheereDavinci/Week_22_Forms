@@ -2,5 +2,5 @@
 	<p>
 		Mad Libs 2019
 		<span>&copy Chris Minheere 99040522</span><br>
-		Contact information: <a href="https://github.com/ChrisMinheereDavinci">Github</a>.</p>
+		More information on my: <a href="https://github.com/ChrisMinheereDavinci">Github Page</a>.</p>
 </div>
