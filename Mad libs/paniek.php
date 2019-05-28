@@ -11,6 +11,34 @@
 </head>
 
 <body>
+<?php
+		$questions = array("vraag1","vraag2","vraag3","vraag4","vraag5","vraag6","vraag7","vraag8"); //hier wordt alle data uit de vraagen in een aray gestopt.
+		if ($_SERVER["REQUEST_METHOD"] == "POST") { // de data wordt doorgestuurt met een POST.
+			$valid = true;
+			foreach ($questions as $value) {  //voor elke $questions die er is loopt hij.
+			    $data[$value] = ""; 
+			    $dataErr[$value] = ""; 
+				if (empty($_POST[$value])) { 
+					$dataErr[$value] = "Required";  // alle velden moetten ingevuld zijn.
+					$valid = false; 
+				}
+				else{
+					$data[$value] = test_input($_POST[$value]); 
+				}
+			}
+			if($valid){
+				header('Location: paniekuitwerking.php?'. http_build_query($data)); 
+				exit();
+			}
+		}
+		function test_input($data) { 
+		    $data = trim($data);
+		    $data = stripslashes($data);
+		    $data = htmlspecialchars($data);
+		    return $data;
+		}
+	?>
+
     <div id='container'>
         <div id='container'>
             <?php include "menu.php"; ?>
@@ -50,7 +78,7 @@
 
                                                                                 <class="q">Wat is jou favorite bezigheid?
                                                                                     <input class="a" type="text" value="<?php echo $data["vraag8"]; ?>" name="vraag8"><span class="error">*<?php echo $dataErr["vraag8"]; ?></span>
-                                                                                    
+
                                                                                     <p><input class="a" type="submit" name="submit" value="test">
                     </form>
                 </div>

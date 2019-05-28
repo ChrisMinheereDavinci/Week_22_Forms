@@ -1,9 +1,22 @@
+body {
+    background-image: url("../img/paniek.jpg");
+    background-color: #cccccc;
+   }
+
+
+#container{
+    background-color: rgba(184, 184, 184, 0.849);
+    border-radius: 25px;
+    padding: 20px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    border-radius: 25px;
   }
   
   li {

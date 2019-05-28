@@ -13,7 +13,6 @@
 <body>
     <div id='container'>
         <?php include "menu.php"; ?>
-hier komt zooi <b>dikgedrukt</b>
         <?php include "footer.php"; ?>
     </div>
 </body>
